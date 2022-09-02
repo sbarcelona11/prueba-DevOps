@@ -1,0 +1,8 @@
+docker build -t new-request-tracker .
+docker images
+docker run -d --name test-sebastian-barcelona new-request-tracker -p 80:80 
+docker stop test-sebastian-barcelona
+docker ps -a
+docker rm test-sebastian-barcelona
+docker run -d --name produccion-sebastian-barcelona new-request-tracker -p 8116:80 
+docker ps -a
